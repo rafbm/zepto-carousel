@@ -21,6 +21,7 @@ button.disable {
     opacity: .2;
 }
 
+ul { padding: 0 }
 li {
     -webkit-transition: .3s -webkit-transform ease-out;
        -moz-transition: .3s -moz-transform ease-out;
