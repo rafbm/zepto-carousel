@@ -22,11 +22,11 @@ button.disable {
 }
 
 li {
-    -webkit-transition: .3s all ease-out;
-       -moz-transition: .3s all ease-out;
-        -ms-transition: .3s all ease-out;
-         -o-transition: .3s all ease-out;
-            transition: .3s all ease-out;
+    -webkit-transition: .3s -webkit-transform ease-out;
+       -moz-transition: .3s -moz-transform ease-out;
+        -ms-transition: .3s -ms-transform ease-out;
+         -o-transition: .3s -o-transform ease-out;
+            transition: .3s transform ease-out;
 
     line-height: 300px;
     color: white;
@@ -35,7 +35,7 @@ li {
 
     list-style: none;
     position: absolute;
-    left: 500px;
+    -webkit-transform: translate3d(500px,0,0);
 }
 li.moving {
     -webkit-transition: none;
@@ -49,7 +49,7 @@ li:nth-child(2) { background: blue; }
 li:nth-child(3) { background: purple; }
 li:nth-child(4) { background: orange; }
 
-li.to-current { left: 0; }
-li.to-prev { left: -500px !important; }
-li.to-next { left: 500px !important; }
+li.to-current { -webkit-transform: translate3d(0,0,0); }
+li.to-prev { -webkit-transform: translate3d(-500px,0,0) !important; }
+li.to-next { -webkit-transform: translate3d(500px,0,0) !important; }
 

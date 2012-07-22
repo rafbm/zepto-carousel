@@ -21,7 +21,7 @@
         move = {
             reset: function() {
                 current.removeClass('moving');
-                current[0].style.left = 0;
+                current[0].style.webkitTransform = 'translate3d(0,0,0)';
             },
             next: function() {
                 var element = current.next();
@@ -57,7 +57,7 @@
             current.addClass('moving');
             function fn(event) {
                 event.preventDefault();
-                current[0].style.left = (event.touches[0].pageX - x) + 'px';
+                current[0].style.webkitTransform = 'translate3d(' + (event.touches[0].pageX - x) + 'px,0,0)';
             };
             doc.bind('touchmove', fn).one('touchend', function() {
                 doc.off('touchmove', fn);
